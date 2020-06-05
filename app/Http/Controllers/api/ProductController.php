@@ -4,6 +4,9 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Validator;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -35,7 +38,38 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validator = Validator::make($request->all(), [
+                'name' => 'required|string',
+                'amount' => 'required',
+                'qty_stock' => 'required',
+            ]);
+
+            if (!$validator->fails()) {
+                $product = Product::create($request->all());
+                if ($product) {
+                    return response()->json([
+                        'status' => 200, 
+                        'message' => $product
+                    ]);
+                } else {
+                    return response()->json([
+                        'status' => 400, 
+                        'message' => 'Erro nos dados enviados'
+                    ]);
+                }
+            } else {
+                return response()->json([
+                    'status' => 400, 
+                    'message' => 'Erro nos dados enviados'
+                ]);
+            }   
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 500, 
+                'message' => 'Erro interno no servidor'
+            ]);
+        }
     }
 
     /**
