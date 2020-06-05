@@ -14,11 +14,11 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 ### Instalação
 
 ## Passo 1
-O primeiro passa para que a API funcione corretamente é necessário fazer o download e instaçação do composer em sua máquin.
+O primeiro passa para que a API funcione corretamente é necessário fazer o download e instaçação do composer em seu computador.
 mais detalhes em: https://getcomposer.org/
 
 ## Passo 2
-Com o composer instalado clone o projeto em sua máquina.
+Com o composer instalado clone o projeto em seu computador.
 
 ## Passo 3
 Agora basta selecionar o local do projeto em um terminal e instalar as dependencias do projetos usando o seguinte comando:
