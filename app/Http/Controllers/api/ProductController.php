@@ -98,7 +98,40 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $product = DB::select('SELECT
+                                        pr.id AS id,
+                                        pr.name AS name,
+                                        pr.amount AS amount,
+                                        pr.qty_stock AS stock,
+                                        pu.created_at AS date,
+                                        pu.quantity_purchased AS purchased
+                                    FROM
+                                        products AS pr
+                                        LEFT JOIN purchases AS pu ON pr.id = pu.product_id 
+                                    WHERE
+                                        pr.id = "'.$id.'"
+                                    ORDER BY
+                                        pu.id DESC
+                                    LIMIT 1');
+
+            if ($product) {
+                return response()->json([
+                    'status' => 200, 
+                    'message' => $product
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 400, 
+                    'message' => 'Erro nos dados enviados'
+                ]);
+            }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 500, 
+                'message' => 'Erro interno no servidor'
+            ]);
+        }
     }
 
     /**
