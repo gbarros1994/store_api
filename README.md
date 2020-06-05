@@ -24,7 +24,7 @@ Com o composer instalado clone o projeto em sua máquina.
 Agora basta selecionar o local do projeto em um terminal e instalar as dependencias do projetos usando o seguinte comando:
 composer install
 
-##Passo 4
+## Passo 4
 Agora basta inicar o servidor usando o seguinte comando:
 php artisan serve --port=8080
 
