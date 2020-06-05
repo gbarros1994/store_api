@@ -36,4 +36,4 @@ php artisan serve --port=8080
 
 ## Autor
 
-* **Gerson Barros** - [PurpleBooth](https://github.com/gbarros1994)
+* **Gerson Barros** - [Gerson](https://github.com/gbarros1994)
