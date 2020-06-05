@@ -17,7 +17,25 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        try {
+            $product = Product::all('name', 'amount', 'qty_stock');
+            if ($product) {
+                return response()->json([
+                    'status' => 200, 
+                    'message' => $product
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 400, 
+                    'message' => 'Erro nos dados enviados'
+                ]);
+            }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 500, 
+                'message' => 'Erro interno no servidor'
+            ]);
+        }
     }
 
     /**
