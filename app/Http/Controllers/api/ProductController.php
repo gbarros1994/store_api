@@ -38,7 +38,6 @@ class ProductController extends Controller
         }
     }
 
-
     /**
      * Store a newly created resource in storage.
      *
@@ -123,18 +122,6 @@ class ProductController extends Controller
                 'message' => 'Erro interno no servidor'
             ]);
         }
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
