@@ -14,15 +14,19 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 ### Instalação
 
 ## Passo 1
-O primeiro passa para que a API funcione corretamente é necessário fazer o download e instaçação do composer em sua máquina
-https://getcomposer.org/
+O primeiro passa para que a API funcione corretamente é necessário fazer o download e instaçação do composer em sua máquin.
+mais detalhes em: https://getcomposer.org/
 
 ## Passo 2
 Com o composer instalado clone o projeto em sua máquina.
 
 ## Passo 3
-Agora basta selecionar o local do projeto em um terminal e instalar as dependencias do projetos usando o seguinte comando
+Agora basta selecionar o local do projeto em um terminal e instalar as dependencias do projetos usando o seguinte comando:
 composer install
+
+##Passo 4
+Agora basta inicar o servidor usando o seguinte comando:
+php artisan serve --port=8080
 
 
 ## Desenvolvido com
@@ -32,4 +36,4 @@ composer install
 
 ## Autor
 
-* **Gerson Barros** - *Initial work* - [PurpleBooth](https://github.com/gbarros1994)
+* **Gerson Barros** - [PurpleBooth](https://github.com/gbarros1994)
