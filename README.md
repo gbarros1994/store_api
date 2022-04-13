@@ -1,4 +1,4 @@
-# Api Store --
+# Api Store
 
 A API consiste em testar meus conhecimentos.
 
